@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #212529;
+    --border-color: #666;
+    --font-color: #f1f5f9;
+    --primary-color: #4dff91;
+    --error-color: #ff0043;
+    --beauty-color: #3db0f7;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+#main {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 750px;
+}
+
+#main h1 {
+    text-align: center;
+}
+
+#themeSwitcher {
+    padding: 0.5rem;
+    background-color: var(--bg-color);
+    border: .125rem solid var(--font-color);
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+#themeSwitcher:hover {
+    background-color: var(--font-color);
+    color: var(--bg-color);
+}
+
+.playersWrapper {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+#playerName01, #playerName02 {
+    padding: 0.3rem;
+}
+
+.namesWrapper {
+    text-align: center;
+}
+
+#playersButton {
+    padding: 0.3rem;
+    background-color: var(--bg-color);
+    border: .125rem solid var(--font-color);
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+#playersButton:hover {
+    background-color: var(--font-color);
+    color: var(--bg-color);
+}
+
+.gameArea {
+    text-align: center;
+    display: none;
+    width: 450px;
+    height: 450px;
+    background-color: var(--font-color);;
+    color: var(--bg-color);
+}
+
+#mostrador {
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.gameTeste {
+    display: flex;
+    width: 100%;
+}
+
+.gameCollumn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--font-color);
+    background-color: var(--beauty-color);
+    border: 2px solid black;
+    width: 34%;
+    height: 150px;
+    font-size: 5rem;
+}
+
+#restartBtn {
+    margin-top: 1rem;
+    padding: 0.3rem;
+    background-color: var(--bg-color);
+    border: .125rem solid var(--font-color);
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+#restartBtn:hover {
+    background-color: var(--font-color);
+    color: var(--bg-color);
+}
+
+@media (max-width: 471px) {
+    .gameArea {
+        width: 350px;
+        height: 350px;
+    }
+
+    .playersWrapper h2 {
+        text-align: center;
+    }
+
+    #main {
+        width: 350px;
+        height: 350px;
+    }
+
+    #playerName01, #playerName02 {
+        width: 25%;
+    }
+}
+

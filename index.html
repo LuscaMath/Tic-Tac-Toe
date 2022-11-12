@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jogo da Velha</title>
+</head>
+<body>
+
+    <main id="main" data-theme="dark">
+        <h1>Jogo da Velha</h1>
+        <button type="button" id="themeSwitcher">Alternar Tema</button>
+
+        <div class="playersWrapper">
+            <h2>Digite o nome dos jogadores</h2>
+            <div class="namesWrapper">
+                <label for="playerName01">X</label>
+                <input type="text" id="playerName01" placeholder="jogador01">
+                <label for="playerName02">O</label>
+                <input type="text" id="playerName02" placeholder="jogador02">
+                <button type="button" id="playersButton">Começar Jogo</button>
+            </div>
+        </div>
+
+        <div class="gameArea">
+            <div id="mostrador">
+                <p>Vez do jogador: </p>
+                <span></span>
+            </div>
+
+            <div class="gameTeste">
+                <div  id="0-1" class="gameCollumn" jogada=""></div>
+                <div  id="0-2" class="gameCollumn" jogada=""></div>
+                <div  id="0-3" class="gameCollumn" jogada=""></div>
+            </div>
+            <div class="gameTeste">
+                <div  id="1-1" class="gameCollumn" jogada=""></div>
+                <div  id="1-2" class="gameCollumn" jogada=""></div>
+                <div  id="1-3" class="gameCollumn" jogada=""></div>
+            </div>
+            <div class="gameTeste">
+                <div  id="2-1" class="gameCollumn" jogada=""></div>
+                <div  id="2-2" class="gameCollumn" jogada=""></div>
+                <div  id="2-3" class="gameCollumn" jogada=""></div>
+            </div>
+            <button id="restartBtn" type="button">Reiniciar Jogo</button>
+        </div>
+    </main>
+    
+
+    <script src="./index.js"></script>
+</body>
+</html>
