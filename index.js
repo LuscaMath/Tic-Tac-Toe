@@ -31,8 +31,6 @@ playersBtn.addEventListener('click', function () {
         alert("Digite o nome dos jogadores para iniciar o jogo")
     } else {
         gameArea.style.setProperty('display', "block")
-        document.getElementById('playerName01').value = ''
-        document.getElementById('playerName02').value = ''
     }
 
 })
@@ -47,10 +45,10 @@ function updatePlayTime() {
 
     if (playTime === player01) {
         let player = document.querySelectorAll("div#mostrador  span")[0]
-        player.innerText = player01
+        player.innerText = player01 
     } else {
         let player = document.querySelectorAll("div#mostrador  span")[0]
-        player.innerText = player02
+        player.innerText = player02 
     }
 }
 
@@ -92,40 +90,91 @@ async function countVictory() {
     let c2 = document.getElementById('2-2').getAttribute('jogada')
     let c3 = document.getElementById('2-3').getAttribute('jogada')
 
+    let name1 = document.getElementById('playerName01').value
+    let name2 = document.getElementById('playerName02').value
+
     let winner = "";
 
     if (a1 === player01 && a2 === player01 && a3 === player01) {
-        winner = player01
+        winner = player01 + " - " + name1
+        document.getElementById('0-1').classList.add('win')
+        document.getElementById('0-2').classList.add('win')
+        document.getElementById('0-3').classList.add('win')
     } else if (a1 === player02 && a2 === player02 && a3 === player02) {
-        winner = player02
+        winner = player02 + " - " + name2
+        document.getElementById('0-1').classList.add('win')
+        document.getElementById('0-2').classList.add('win')
+        document.getElementById('0-3').classList.add('win')
     } else if (b1 === player01 && b2 === player01 && b3 === player01) {
-        winner = player01
+        winner = player01 + " - " + name1
+        document.getElementById('1-1').classList.add('win')
+        document.getElementById('1-2').classList.add('win')
+        document.getElementById('1-3').classList.add('win')
     } else if (b1 === player02 && b2 === player02 && b3 === player02) {
-        winner = player02
+        winner = player02 + " - " + name2
+        document.getElementById('1-1').classList.add('win')
+        document.getElementById('1-2').classList.add('win')
+        document.getElementById('1-3').classList.add('win')
     } else if (c1 === player01 && c2 === player01 && c3 === player01) {
-        winner = player01
+        winner = player01 + " - " + name1
+        document.getElementById('2-1').classList.add('win')
+        document.getElementById('2-2').classList.add('win')
+        document.getElementById('2-3').classList.add('win')
     } else if (c1 === player02 && c2 === player02 && c3 === player02) {
-        winner = player02
+        winner = player02 + " - " + name2
+        document.getElementById('2-1').classList.add('win')
+        document.getElementById('2-2').classList.add('win')
+        document.getElementById('2-3').classList.add('win')
     } else if (a1 === player01 && b1 === player01 && c1 === player01) {
-        winner = player01
+        winner = player01 + " - " + name1
+        document.getElementById('0-1').classList.add('win')
+        document.getElementById('1-1').classList.add('win')
+        document.getElementById('2-1').classList.add('win')
     } else if (a1 === player02 && b1 === player02 && c1 === player02) {
-        winner = player02
+        winner = player02 + " - " + name2
+        document.getElementById('0-1').classList.add('win')
+        document.getElementById('1-1').classList.add('win')
+        document.getElementById('2-1').classList.add('win')
     } else if (a2 === player01 && b2 === player01 && c2 === player01) {
-        winner = player01
+        winner = player01 + " - " + name1
+        document.getElementById('0-2').classList.add('win')
+        document.getElementById('1-2').classList.add('win')
+        document.getElementById('2-2').classList.add('win')
     } else if (a2 === player02 && b2 === player02 && c2 === player02) {
-        winner = player02
+        winner = player02 + " - " + name2
+        document.getElementById('0-2').classList.add('win')
+        document.getElementById('1-2').classList.add('win')
+        document.getElementById('2-2').classList.add('win')
     } else if (a3 === player01 && b3 === player01 && c3 === player01) {
-        winner = player01
+        winner = player01 + " - " + name1
+        document.getElementById('0-3').classList.add('win')
+        document.getElementById('1-3').classList.add('win')
+        document.getElementById('2-3').classList.add('win')
     } else if (a3 === player02 && b3 === player02 && c3 === player02) {
-        winner = player02
+        winner = player02 + " - " + name2
+        document.getElementById('0-3').classList.add('win')
+        document.getElementById('1-3').classList.add('win')
+        document.getElementById('2-3').classList.add('win')
     } if (a1 === player01 && b2 === player01 && c3 === player01) {
-        winner = player01
+        winner = player01 + " - " + name1
+        document.getElementById('0-1').classList.add('win')
+        document.getElementById('1-2').classList.add('win')
+        document.getElementById('2-3').classList.add('win')
     } else if (a1 === player02 && b2 === player02 && c3 === player02) {
-        winner = player02
+        winner = player02 + " - " + name2
+        document.getElementById('0-1').classList.add('win')
+        document.getElementById('1-2').classList.add('win')
+        document.getElementById('2-3').classList.add('win')
     } else if (a3 === player01 && b2 === player01 && c1 === player01) {
-        winner = player01
+        winner = player01 + " - " + name1
+        document.getElementById('0-3').classList.add('win')
+        document.getElementById('2-2').classList.add('win')
+        document.getElementById('3-1').classList.add('win')
     } else if (a3 === player02 && b2 === player02 && c1 === player02) {
-        winner = player02
+        winner = player02 + " - " + name2
+        document.getElementById('0-3').classList.add('win')
+        document.getElementById('2-2').classList.add('win')
+        document.getElementById('3-1').classList.add('win')
     }
 
     if (winner != "") {
@@ -145,7 +194,6 @@ async function countVictory() {
 
 function restartGame() {
     restartBtn.addEventListener('click', function () {
-
         window.location.assign('index.html')
     })
 }

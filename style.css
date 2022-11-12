@@ -122,6 +122,10 @@ body {
     color: var(--bg-color);
 }
 
+.win {
+    background-color: #4ee44e;
+}
+
 @media (max-width: 471px) {
     .gameArea {
         width: 350px;
