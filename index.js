@@ -168,13 +168,13 @@ async function countVictory() {
     } else if (a3 === player01 && b2 === player01 && c1 === player01) {
         winner = player01 + " - " + name1
         document.getElementById('0-3').classList.add('win')
-        document.getElementById('2-2').classList.add('win')
-        document.getElementById('3-1').classList.add('win')
+        document.getElementById('1-2').classList.add('win')
+        document.getElementById('2-1').classList.add('win')
     } else if (a3 === player02 && b2 === player02 && c1 === player02) {
         winner = player02 + " - " + name2
         document.getElementById('0-3').classList.add('win')
-        document.getElementById('2-2').classList.add('win')
-        document.getElementById('3-1').classList.add('win')
+        document.getElementById('1-2').classList.add('win')
+        document.getElementById('2-1').classList.add('win')
     }
 
     if (winner != "") {
